@@ -1,0 +1,31 @@
+# LLM-Assisted Fraud Intent Annotation
+
+This repository contains a simple implementation of the annotation pipeline
+described in our paper:
+
+"Detecting Fraud Intent in Cryptocurrency Discussions with LLM-Assisted Annotation"
+
+The script uses a local large language model via [Ollama](https://ollama.com/)
+to classify text comments into three categories:
+
+- Fraud intention
+- Solution or prevention intention
+- Out of context
+
+Datasets are **not** included for privacy and licensing reasons.
+Users must provide their own CSV or Excel file with a text column.
+
+## LLM-assisted labeling script
+
+The file `llm_labeling/run_labeling.py` implements our annotation pipeline.
+To use it, install the dependencies (`pandas`, `tqdm`, `ollama`) and configure
+a local model in Ollama (for example `mistral:instruct`).
+
+Then edit the parameters in the `__main__` block of `run_labeling.py`:
+
+- `INPUT_FILE`: path to your CSV/Excel file
+- `INPUT_SHEET`: sheet name for Excel files (or `None`)
+- `TEXT_COLUMN`: name of the text column to classify
+- `OUTPUT_FILE`: path for the output CSV with labels
+- `MODEL_NAME`: Ollama model to use
+- `PROMPT_CHOICE`: `baseline`, `domain_specific`, or `intent_focused`
