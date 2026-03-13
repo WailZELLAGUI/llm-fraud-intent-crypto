@@ -1,9 +1,18 @@
+
+
+"""
+This script illustrates our LLM-assisted labeling pipeline.
+Datasets are not included; to use it, provide your own CSV/Excel file
+with a text column (see INPUT_FILE and TEXT_COLUMN below).
+"""
+
 import time
 from typing import List
 
 import ollama
 import pandas as pd
 from tqdm import tqdm
+
 
 
 # ============================================================
