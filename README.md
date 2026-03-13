@@ -63,9 +63,9 @@ After evaluation, the script automatically selects the **best-performing model b
 This implementation is intended as a **baseline example**. Users are encouraged to further improve performance by:
 
 - tuning model hyperparameters (e.g., grid search or cross-validation)
-
-Experimental results are reported in the paper.
 - experimenting with additional machine learning models
 - modifying the TF-IDF configuration or feature extraction strategy
 
 Depending on the specific classification task and dataset characteristics, other classifiers (such as SVM, gradient boosting methods, or neural models) may yield better results.
+
+NOTE: Experimental results are reported in the paper.
